@@ -1,7 +1,12 @@
+body{
+  background-color:  #ffcce6
+}
+
 h1{
   font-family: "Chewy", cursive;
 }
 
+
 .search{
-  background-color: black;
+  background-color: #b3daff;
 }
