@@ -1,12 +1,19 @@
 body{
-  background-color:  #ffcce6
+  background-color:  #435056;
+}
+h1{
+  color: #ffffff
+
 }
 
-h1{
+#headers{
   font-family: "Chewy", cursive;
 }
 
 
 .search{
-  background-color: #b3daff;
+  margin: 10px;
+  padding: 5px 15px 15px 20px;
+  border-radius: 10px;
+  background-color: #f1f3f4;
 }
