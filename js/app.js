@@ -1,35 +1,20 @@
-var articleRequest =" ";
+var articleRequest ="Julian";
+
+
  function MyViewModel() {
   var self = this;
   self.nameTest = ko.observable("Julian");
-};
-
-
-function wikipedia(){
-  var wikiUrl = 'https://en.wikipedia.org/w/api.php?' +
-        'action=opensearch&search=' + articleRequest +
-        '&format=json&callback=wikiCallback'
-
-  $.ajax({
-    url: wikiUrl,
-    data: {
-      format: 'jsonp'
-
-    },
-    //jsonp: 'callback',
-    error: function(){
-      $(".wikiRequest").html("<p> Cant find wikiRequest </p>");
-    },
-    success: function(response){
-      var url = response[0][3];
-      console.log(response);
-
-    }
-
-  });
-
 
 };
 
-wikipedia();
+
+var nyUrl = 'http://api.nytimes.com/svc/search/v2/articlesearch.json?q=' + articleRequest + '=&sort=newest&api-key=04af26cdd76f4b8da348f53553eadcb3';
+
+$.getJSON(nyUrl, function(data){
+
+  articles = data.response.docs;
+  console.log(articles);
+})
+
+
 ko.applyBindings(new MyViewModel());
