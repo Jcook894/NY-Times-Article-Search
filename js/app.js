@@ -12,8 +12,14 @@ function wikipedia(){
 
   $.ajax({
     url: wikiUrl,
-    datatype: 'jsonp',
+    data: {
+      format: 'jsonp'
+
+    },
     //jsonp: 'callback',
+    error: function(){
+      $(".wikiRequest").html("<p> Cant find wikiRequest </p>");
+    },
     success: function(response){
       var url = response[0][3];
       console.log(response);
@@ -24,4 +30,6 @@ function wikipedia(){
 
 
 };
+
+wikipedia();
 ko.applyBindings(new MyViewModel());
