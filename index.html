@@ -2,9 +2,6 @@
 <html>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link href="https://fonts.googleapis.com/css?family=Chewy" rel="stylesheet">
-<link rel="stylesheet" href="style.css" />
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="knockout-3.4.1.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
     <body>
       <h1 id="headers">Wiki Article Search</h1>
@@ -23,9 +20,15 @@
     </div>
     <div class="search">
       <h2 id="headers">Wikipedia Articles : </h2>
-      <p>
-        Hello world!
-      </p>
-    </div>
+      <div data-bind="text: nameTest ">
+
+      </div>
+
+      </div>
+
   </body>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/knockout-3.4.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/app.js"></script>
 </html>
