@@ -13,7 +13,7 @@
               </div>
             <div class="col-md-8">
               <form method="post" class="search-content">
-                  <input  class="nySearch" type="search" data-bind="textInput: nyTimes" placeholder="Search" />
+                  <input  class="nySearch" type="search"  placeholder="Search" />
 
                   <input class="btn-success submit-btn" type="submit" value="Search!" />
               </form>
@@ -22,14 +22,13 @@
     </div>
     <div class="search">
       <h2 id="headers">NY Times Articles : </h2>
-      <div data-bind="text: nyTimes ">
+      <ul  class="article"id="ny-times-articles">
 
-      </div>
+      </ul>
 
       </div>
 
   </body>
-    <script src="js/knockout-3.4.1.js"></script>
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="js/app.js"></script>

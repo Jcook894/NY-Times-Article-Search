@@ -1,11 +1,9 @@
-function MyViewModel(articles) {
-  var self = this;
-  self.articleSearch = $('articleSearch').val();
-
-
-};
 
 function loadData(){
+  var $nyArticles = $('#ny-times-articles');
+
+  var articleRequest = $(".nySearch").val();
+
 
    var nyUrl = 'http://api.nytimes.com/svc/search/v2/articlesearch.json?q=' + articleRequest + '=&sort=newest&api-key=04af26cdd76f4b8da348f53553eadcb3';
 
@@ -16,15 +14,19 @@ function loadData(){
       for(var i = 0; i < nyArticles.length; i++){
         var articles = nyArticles[i];
 
-      }
+        $nyArticles.append('<li class="article">'+
+                '<a href="'+articles.web_url+'">'+articles.headline.main+'</a>'+
+                '<p>' + articles.snippet + '</p>'+
+            '</li>');
 
-});
+      };
 
-
-
-
-ko.applyBindings(new MyViewModel());
+    });
 
 return false;
-}
-$('#search-content').submit(loadData);
+
+
+};
+
+
+$('.search-content').submit(loadData);
