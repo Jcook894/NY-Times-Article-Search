@@ -12,15 +12,17 @@
                 <h2 id="headers">Search for articles :</h2>
               </div>
             <div class="col-md-8">
+              <form method="post" class="search-content">
+                  <input  class="nySearch" type="search" data-bind="textInput: nyTimes" placeholder="Search" />
 
-                <input type="text" placeholder="Search" />
-                <input class="btn-success button" type="button" value="Search!" />
+                  <input class="btn-success submit-btn" type="submit" value="Search!" />
+              </form>
             </div>
             </div>
     </div>
     <div class="search">
       <h2 id="headers">NY Times Articles : </h2>
-      <div class="wikiRequest" data-bind="text: nameTest ">
+      <div data-bind="text: nyTimes ">
 
       </div>
 
